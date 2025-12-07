@@ -22,7 +22,7 @@ class UtilisateurController extends Controller
             'motdepasse' => 'required|string|max:255',
         ]);
 
-        // ajouter dans la base
+        // ajouter dans la base avec mot de passe hashé
         Utilisateur::create([
             'id_user' => $request->id_user,
             'nom' => $request->nom,
@@ -30,10 +30,9 @@ class UtilisateurController extends Controller
             'adresse' => $request->adresse,
             'phone' => $request->phone,
             'email' => $request->email,
-            'motdepasse' => $request->motdepasse,
+            'motdepasse' => bcrypt($request->motdepasse), 
             'motdepasse_change' => 0,
         ]);
-        
 
         return redirect('/utilisateur/create')->with('success', 'Utilisateur ajouté !');
     }
