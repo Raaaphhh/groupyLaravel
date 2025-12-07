@@ -56,5 +56,3 @@ Laravel est un framework PHP puissant et élégant qui offre :
 Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou une pull request pour toute amélioration ou correction.
 
 ---
-
-Merci de votre intérêt pour ce projet ! 🚀
