@@ -36,4 +36,26 @@ class UtilisateurController extends Controller
 
         return redirect('/utilisateur/create')->with('success', 'Utilisateur ajouté !');
     }
+
+    public function formLogin(){
+        return view('utilisateur.login');
+    }
+
+    public function Login(Request $request){
+        $request->validate([
+            'email' => 'required|email',
+            'motdepasse' => 'required|string|max:255',
+        ]);
+
+        $user = Utilisateur::where('email', $request->email)
+                            ->where('motdepasse', $request->motdepasse)
+                            ->first();
+
+        if($user){
+            return redirect('/dashboard')->with('success', 'Connexion réussie !');
+        } else {
+            return back()->with('error', 'Email ou mot de passe incorrect');
+        }
+    }
+
 }

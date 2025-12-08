@@ -22,7 +22,8 @@
             <a class="navbar-brand" href="/">GroupyLaravel</a>
 
             <div>
-                <a href="/utilisateur/create" class="btn btn-outline-light btn-sm">Ajouter Utilisateur</a>
+                <a href="/utilisateur/create" class="btn btn-outline-light btn-sm">s'inscrire</a>
+                <a href="/utilisateur/formLogin" class="btn btn-outline-info btn-sm">Se connecter</a>
             </div>
         </div>
     </nav>

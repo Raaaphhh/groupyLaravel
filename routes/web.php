@@ -12,3 +12,6 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/utilisateur/create', [UtilisateurController::class, 'create']);
 Route::post('/utilisateur/store', [UtilisateurController::class, 'store']);
+
+Route::get('/utilisateur/formLogin', [UtilisateurController::class, 'formLogin']);
+Route::post('/utilisateur/login', [UtilisateurController::class, 'Login']);
